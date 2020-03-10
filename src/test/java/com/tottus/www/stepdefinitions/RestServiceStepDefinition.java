@@ -1,10 +1,11 @@
 package com.tottus.www.stepdefinitions;
 
+import static com.tottus.www.exceptions.ServicioRestException.MESSAGE_FAILED_THE_RESPONSE_SERVICE_REST;
+import static com.tottus.www.utils.Constantes.ENDPOINT;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static org.hamcrest.Matchers.containsString;
-import static com.tottus.www.exceptions.ServicioRestException.MESSAGE_FAILED_THE_RESPONSE_SERVICE_REST;
 
 import java.util.List;
 
@@ -31,7 +32,7 @@ public class RestServiceStepDefinition {
 
 	@Given("^the user enter the endpoint of the rest service$")
 	public void the_user_enter_the_endpoint_of_the_rest_service() {
-		theActorCalled("juan").whoCan(CallAnApi.at("https://gorest.co.in"));
+		theActorCalled("juan").whoCan(CallAnApi.at(ENDPOINT));
 	}
 
 	@When("^he enter the dates$")
