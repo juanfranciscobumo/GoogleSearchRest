@@ -31,17 +31,17 @@ public class RestServiceStepDefinition {
 	}
 
 	@Given("^the user enter the endpoint of the rest service$")
-	public void the_user_enter_the_endpoint_of_the_rest_service() {
+	public void theUserEnterTheEndpointOfTheRestService() {
 		theActorCalled("juan").whoCan(CallAnApi.at(ENDPOINT));
 	}
 
 	@When("^he enter the dates$")
-	public void he_enter_the_dates(List<User> user) {
+	public void heEnterTheDates(List<User> user) {
 		theActorInTheSpotlight().attemptsTo(FindAUser.withData(user.get(0)));
 	}
 
 	@Then("^he verify the expected data$")
-	public void he_verify_the_expected_data(List<String> datos) {
+	public void heVerifyTheExpectedData(List<String> datos) {
 		theActorInTheSpotlight().should(
 				seeThat(TheResponseDate.firstName(), containsString(datos.get(0)))
 						.orComplainWith(ServicioRestException.class, MESSAGE_FAILED_THE_RESPONSE_SERVICE_REST),
@@ -51,5 +51,7 @@ public class RestServiceStepDefinition {
 						.orComplainWith(ServicioRestException.class, MESSAGE_FAILED_THE_RESPONSE_SERVICE_REST),
 				seeThat(TheResponseDate.statusCode(), containsString(datos.get(3)))
 						.orComplainWith(ServicioRestException.class, MESSAGE_FAILED_THE_RESPONSE_SERVICE_REST));
+
 	}
+
 }

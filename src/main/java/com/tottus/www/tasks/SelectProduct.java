@@ -1,8 +1,8 @@
 package com.tottus.www.tasks;
 
-import static com.tottus.www.userinterfaces.MakePurchaseUserInterface.BTNPRODUCTO;
-import static com.tottus.www.userinterfaces.MakePurchaseUserInterface.OPTTECNOLOGIA;
-import static com.tottus.www.userinterfaces.MakePurchaseUserInterface.VENTANAEMERGENTE;
+import static com.tottus.www.userinterfaces.MakePurchaseUserInterface.BTNPRODUCT;
+import static com.tottus.www.userinterfaces.MakePurchaseUserInterface.OPTTECNOLOGY;
+import static com.tottus.www.userinterfaces.MakePurchaseUserInterface.POPUPWINDOW;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 import net.serenitybdd.screenplay.Actor;
@@ -11,23 +11,23 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Scroll;
 
 public class SelectProduct implements Task {
-	private String producto;
+	private String product;
 
-	public SelectProduct(String producto) {
-		this.producto = producto;
+	public SelectProduct(String product) {
+		this.product = product;
 	}
 
 	@Override
 	public <T extends Actor> void performAs(T actor) {
 		actor.attemptsTo(
-				Click.on(VENTANAEMERGENTE),
-				Click.on(OPTTECNOLOGIA),
-				Scroll.to(BTNPRODUCTO.of(producto)),
-				Click.on(BTNPRODUCTO.of(producto)));
+				Click.on(POPUPWINDOW),
+				Click.on(OPTTECNOLOGY),
+				Scroll.to(BTNPRODUCT.of(product)),
+				Click.on(BTNPRODUCT.of(product)));
         
 	}
 
-	public static SelectProduct inTheStore(String producto) {
-		return instrumented(SelectProduct.class, producto);
+	public static SelectProduct inTheStore(String product) {
+		return instrumented(SelectProduct.class, product);
 	}
 }

@@ -5,6 +5,9 @@ import static net.serenitybdd.rest.SerenityRest.lastResponse;
 import net.serenitybdd.screenplay.Question;
 
 public class TheResponseDate {
+	private TheResponseDate() {
+		
+	}
 
 	public static Question<String> firstName() {
 		return actor -> lastResponse().jsonPath().get("result.first_name").toString();

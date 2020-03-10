@@ -34,22 +34,19 @@ public class MakePurchaseStepDefinitions {
 		OnStage.setTheStage(new OnlineCast());
 
 	}
-
 	@Given("^the user is on the store page$")
-	public void the_user_is_on_the_store_page() {
+	public void theUserIsOnTheStorePage() {
 		theActorCalled("juan").can(BrowseTheWeb.with(driver)).attemptsTo(Open.url(URL_TOTTUS));
 	}
 
 	@When("^he select a producto (.*)$")
-	public void he_select_a_producto_Laptop_Celeron_GB_GB(String producto) {
-		theActorInTheSpotlight().attemptsTo(SelectProduct.inTheStore(producto), AddProduct.toShoppingCart());
-
+	public void heSelectAProductoControlMagicRemoteANMRBAAWP(String product) {
+		theActorInTheSpotlight().attemptsTo(SelectProduct.inTheStore(product), AddProduct.toShoppingCart());
 	}
 
 	@Then("^he valid that was added successfully (.*)$")
-	public void he_valid_that_was_added_successfully_Laptop_Celeron_GB_GB(String producto) {
-		theActorInTheSpotlight().should(seeThat(TheProductAdded.is(), containsString(producto))
+	public void heValidThatWasAddedSuccessfullyControlMagicRemoteANMRBAAWP(String product) {
+		theActorInTheSpotlight().should(seeThat(TheProductAdded.is(), containsString(product))
 				.orComplainWith(MakePurchaseException.class, THE_PRODUCT_WAS_NOT_FOUND));
-
 	}
 }

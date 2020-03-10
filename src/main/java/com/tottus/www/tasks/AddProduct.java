@@ -1,7 +1,7 @@
 package com.tottus.www.tasks;
 
-import static com.tottus.www.userinterfaces.MakePurchaseUserInterface.BTNAGREGAR;
-import static com.tottus.www.userinterfaces.MakePurchaseUserInterface.DESPLEGARPRODUCTOS;
+import static com.tottus.www.userinterfaces.MakePurchaseUserInterface.BTNADD;
+import static com.tottus.www.userinterfaces.MakePurchaseUserInterface.DISPLAYPRODUCT;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 import net.serenitybdd.screenplay.Actor;
@@ -12,8 +12,8 @@ public class AddProduct implements Task {
 
 	@Override
 	public <T extends Actor> void performAs(T actor) {
-		actor.attemptsTo(Click.on(BTNAGREGAR),
-				Click.on(DESPLEGARPRODUCTOS)
+		actor.attemptsTo(Click.on(BTNADD),
+				Click.on(DISPLAYPRODUCT)
 				);
 
 	}
