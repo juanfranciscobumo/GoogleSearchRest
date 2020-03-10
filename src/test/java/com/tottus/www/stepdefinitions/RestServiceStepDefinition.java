@@ -31,7 +31,6 @@ public class RestServiceStepDefinition {
 
 	@Given("^the user enter the endpoint of the rest service$")
 	public void the_user_enter_the_endpoint_of_the_rest_service() {
-		// Write code here that turns the phrase above into concrete actions
 		theActorCalled("juan").whoCan(CallAnApi.at("https://gorest.co.in"));
 	}
 

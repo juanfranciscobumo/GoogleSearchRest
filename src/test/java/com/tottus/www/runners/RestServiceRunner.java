@@ -7,7 +7,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-		features="src/test/resources/com/tottus/www/features/restService.feature",
+		features="src/test/resources/com/tottus/www/features/rest_service.feature",
 		glue= "com/tottus/www/stepdefinitions")
 public class RestServiceRunner {
 

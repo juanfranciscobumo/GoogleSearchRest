@@ -37,7 +37,6 @@ public class MakePurchaseStepDefinitions {
 
 	@Given("^the user is on the store page$")
 	public void the_user_is_on_the_store_page() {
-		// Write code here that turns the phrase above into concrete actions
 		theActorCalled("juan").can(BrowseTheWeb.with(driver)).attemptsTo(Open.url(URL_TOTTUS));
 	}
 

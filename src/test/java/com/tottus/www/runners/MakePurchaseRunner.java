@@ -7,7 +7,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-		features="src/test/resources/com/tottus/www/features/makePurchase.feature",
+		features="src/test/resources/com/tottus/www/features/make_purchase.feature",
 		glue= "com/tottus/www/stepdefinitions")
 public class MakePurchaseRunner {
 
