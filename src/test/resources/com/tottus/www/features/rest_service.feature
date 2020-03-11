@@ -14,4 +14,4 @@ Feature: Rest service automation
 
     Examples: 
       | token                                | firstName | lastName | code | statusCode |
-      | deMTZpJZpf3MZC3pAp6WVvhCYqjlDtJRhz8m | Presley   | Smith    |  200 |        200 |
+      | deMTZpJZpf3MZC3pAp6WVvhCYqjlDtJRhz8m | Susie     | Pagac    |  200 |        200 |
