@@ -5,6 +5,8 @@ import static com.tottus.www.userinterfaces.MakePurchaseUserInterface.OPTTECNOLO
 import static com.tottus.www.userinterfaces.MakePurchaseUserInterface.POPUPWINDOW;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
+import com.tottus.www.userinterfaces.MakePurchaseUserInterface;
+
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
@@ -21,6 +23,7 @@ public class SelectProduct implements Task {
 	public <T extends Actor> void performAs(T actor) {
 		actor.attemptsTo(
 				Click.on(POPUPWINDOW),
+				Click.on(MakePurchaseUserInterface.COVID19),
 				Click.on(OPTTECNOLOGY),
 				Scroll.to(BTNPRODUCT.of(product)),
 				Click.on(BTNPRODUCT.of(product)));

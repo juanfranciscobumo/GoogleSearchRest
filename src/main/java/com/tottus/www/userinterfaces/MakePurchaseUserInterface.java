@@ -10,6 +10,7 @@ public class MakePurchaseUserInterface {
 	}
 
 	public static final Target POPUPWINDOW = Target.the("POP-UP WINDOW").located(By.id("onesignal-popover-cancel-button"));
+	public static final Target COVID19 = Target.the("COVID19").located(By.className("closepopup"));
 	public static final Target OPTTECNOLOGY = Target.the("OPTION TECNOLOGY").locatedBy("//nav[@class=\"supermenu\"]/ul/li/p[contains(text(),'Tecnolog')]");
 	public static final Target BTNPRODUCT = Target.the("SELECT THE PRODUCT").locatedBy("//*[contains(text(),'{0}')]");
 	public static final Target BTNADD = Target.the("ADD THE PRODUCT").locatedBy("//div[@class=\"price-selector\"]/div[4]/input[3]");

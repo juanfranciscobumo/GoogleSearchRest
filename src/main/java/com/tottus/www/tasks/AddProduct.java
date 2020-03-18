@@ -12,7 +12,8 @@ public class AddProduct implements Task {
 
 	@Override
 	public <T extends Actor> void performAs(T actor) {
-		actor.attemptsTo(Click.on(BTNADD),
+		actor.attemptsTo(
+				Click.on(BTNADD),
 				Click.on(DISPLAYPRODUCT)
 				);
 

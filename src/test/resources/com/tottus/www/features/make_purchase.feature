@@ -11,4 +11,4 @@ Feature: Make a purchase
 
     Examples: 
       | product                           |
-      | Control Magic Remote ANMR19BA.AWP |
+      | Led 22" FHD HDMI2 DIGITAL 22M3092 |
