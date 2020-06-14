@@ -25,6 +25,6 @@ apply plugin: 'net.serenity-bdd.aggregator'
 dependencies {    
      compile group: 'net.serenity-bdd', name: 'serenity-cucumber', version: '1.9.51'
      compile group: 'net.serenity-bdd', name: 'serenity-screenplay-rest', version: '2.1.8'
-     compile group: 'net.serenity-bdd', name: 'serenity-screenplay', version: '2.1.8'
      testCompile 'org.slf4j:slf4j-simple:1.7.7'
-    } 
+     
+  } 
