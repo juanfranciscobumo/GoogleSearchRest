@@ -6,6 +6,8 @@ import net.serenitybdd.rest.SerenityRest;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
+import static net.serenitybdd.rest.SerenityRest.lastResponse;
+
 public class TheResponseDate implements Question<Boolean> {
 	private String title;
 	private String searchTerms;
@@ -17,10 +19,10 @@ public class TheResponseDate implements Question<Boolean> {
 
 	@Override
 	public Boolean answeredBy(Actor actor) {
-		ResponseGoogleSearch reesponse = SerenityRest.lastResponse().jsonPath().getObject("",
+		ResponseGoogleSearch response = lastResponse().jsonPath().getObject("",
 				ResponseGoogleSearch.class);
 
-		return reesponse.getQueries().getRequest().stream()
+		return response.getQueries().getRequest().stream()
 				.anyMatch(res -> res.getSearchTerms().equals(searchTerms) && res.getTitle().equals(title));
 	}
 

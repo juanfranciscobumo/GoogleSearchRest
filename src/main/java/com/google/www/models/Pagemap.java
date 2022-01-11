@@ -1,13 +1,24 @@
 package com.google.www.models;
 
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonAlias;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import java.util.List;
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Pagemap {
 
-	private List<Item> item = null;
 	private List<Metatag> metatags = null;
+	@JsonAlias("cse_thumbnail")
 	private List<CseThumbnail> cseThumbnail = null;
+	@JsonAlias("cse_image")
 	private List<CseImage> cseImage = null;
+	@JsonAlias("collegeoruniversity")
+	private List<Collegeoruniversity> collegeoruniversity = null;
+	private List<Postaladdress> postaladdress = null;
+	private List<Webpage> webpage = null;
+	private List<Sitenavigationelement> sitenavigationelement = null;
+	private List<Newsarticle> newsarticle = null;
+	private List<Item> item = null;
 
 	public List<Item> getItem() {
 		return item;

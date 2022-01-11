@@ -3,13 +3,21 @@ package com.google.www.models;
 import java.util.List;
 
 public class ResponseGoogleSearch {
-
 	private String kind;
 	private Url url;
 	private Queries queries;
 	private Context context;
 	private SearchInformation searchInformation;
+	private Spelling spelling;
 	private List<Item> items = null;
+
+	public Spelling getSpelling() {
+		return spelling;
+	}
+
+	public void setSpelling(Spelling spelling) {
+		this.spelling = spelling;
+	}
 
 	public String getKind() {
 		return kind;

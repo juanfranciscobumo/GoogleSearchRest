@@ -11,7 +11,7 @@ Feature: Rest service automation
       | key   | cx   | q   |
       | <key> | <cx> | <q> |
     Then he user verify the response message and code <statusCode>
-    And you should see the result of the search the title <title> and <searchTerms>
+    And you should see the result of the search the title '<title>' and '<searchTerms>'
 
     Examples: 
       | key                                     | cx                                | q        | title                           | searchTerms | statusCode |

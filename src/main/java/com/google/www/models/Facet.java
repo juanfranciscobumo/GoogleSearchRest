@@ -1,9 +1,12 @@
 package com.google.www.models;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
+
 public class Facet {
 
 	private String anchor;
 	private String label;
+	@JsonAlias("label_with_op")
 	private String labelWithOp;
 
 	public String getAnchor() {

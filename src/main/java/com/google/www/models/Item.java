@@ -15,7 +15,25 @@ public class Item {
 	private String formattedUrl;
 	private String htmlFormattedUrl;
 	private Pagemap pagemap;
+	private String mime;
+	private String fileFormat;
 	private List<Label> labels = null;
+
+	public String getFileFormat() {
+		return fileFormat;
+	}
+
+	public void setFileFormat(String fileFormat) {
+		this.fileFormat = fileFormat;
+	}
+
+	public String getMime() {
+		return mime;
+	}
+
+	public void setMime(String mime) {
+		this.mime = mime;
+	}
 
 	public String getKind() {
 		return kind;
