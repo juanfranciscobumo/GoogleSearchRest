@@ -57,15 +57,13 @@ dependencies {
             libs.test.cucumber.core,
             libs.test.serenity.screenplay,
             libs.test.serenity.junit,
-            libs.test.serenity.screenplayWebdriver,
             libs.test.serenity.cucumber,
             libs.test.junit,
             libs.test.serenity.rest,
             libs.test.assertj,
             libs.slf4jApi,
             libs.test.jacksonDatatype,
-            libs.test.jacksonDataformat,
-            libs.test.fillo
+            libs.test.jacksonDataformat
 }
 
 test {

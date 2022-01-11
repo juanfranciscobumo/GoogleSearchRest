@@ -6,7 +6,6 @@ ext {
     assertJVersion = '3.22.0'
     jacksonVersion = '2.13.1'
     cucumberVersion = '6.11.0'
-    filloVersion = '1.21'
     libs = [
             slf4jApi: "org.slf4j:slf4j-simple:${slf4jVersion}",
             test    : [
@@ -15,7 +14,6 @@ ext {
                             junit              : "net.serenity-bdd:serenity-junit:${serenityCoreVersion}",
                             rest               : "net.serenity-bdd:serenity-screenplay-rest:${serenityCoreVersion}",
                             screenplay         : "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
-                            screenplayWebdriver: "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}",
                             cucumber           : "net.serenity-bdd:serenity-cucumber6:${serenityCucumberVersion}",
                     ],
                     cucumber         : [
@@ -24,7 +22,6 @@ ext {
                             core : "io.cucumber:cucumber-core:${cucumberVersion}"
                     ],
                     junit            : "org.junit.jupiter:junit-jupiter-engine:${junitVersion}",
-                    fillo            : "com.codoid.products:fillo:${filloVersion}",
                     jacksonDataformat: "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:${jacksonVersion}",
                     jacksonDatatype  : "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:${jacksonVersion}",
                     assertj          : "org.assertj:assertj-core:${assertJVersion}"
