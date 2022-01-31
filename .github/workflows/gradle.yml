@@ -31,5 +31,10 @@ jobs:
     - name: HTML Preview
       uses: pavi2410/html-preview-action@v2
       with:
-    # The HTML file you want to preview, relative to the root of the repo
        html_file: target/site/serenity/index.html
+       
+    - name: Url
+      uses: github-actions-up-and-running/pr-comment@v1.0.0
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        message: ${{ format('[Click here to preview HTML page in browser]({0})', steps.html_preview.outputs.url) }}
