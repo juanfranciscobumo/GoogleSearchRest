@@ -27,6 +27,12 @@ jobs:
         distribution: 'temurin'
     - name: Build with Gradle
       run: ./gradlew clean test aggregate
+
+    - name: Delete multiple branches
+      uses: dawidd6/action-delete-branch@v3.1.0
+      with:
+       github_token: ${{ secrets.GITHUB_TOKEN }}
+       branches: gh-pages
     
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3.6.1
