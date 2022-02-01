@@ -1,29 +1,29 @@
 package com.google.www.tasks;
 
+import static com.google.www.utils.Constantes.RECURSO;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-import com.google.www.interactions.Search;
 import com.google.www.models.Data;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
+import net.serenitybdd.screenplay.rest.interactions.Get;
 
 public class RealiceSearch implements Task {
-	private String key;
-	private String cx;
-	private String q;
+	private Data data;
 
 	public RealiceSearch(Data data) {
-
-		this.key = data.getKey();
-		this.cx = data.getCx();
-		this.q = data.getQ();
+		this.data = data;
 	}
 
 	@Override
 	public <T extends Actor> void performAs(T actor) {
+		actor.attemptsTo(Get.resource(RECURSO)
+				.with(request -> request
+						.param("key", data.getKey())
+						.param("cx", data.getCx())
+						.param("q", data.getQ())));
 
-		actor.attemptsTo(Search.withData(key, cx, q));
 	}
 
 	public static RealiceSearch inGoogle(Data data) {

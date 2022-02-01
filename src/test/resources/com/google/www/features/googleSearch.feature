@@ -1,17 +1,17 @@
-#Author: pacho0323@hotmail.com
-@issues:AUT-1
+#Author: juanfranciscobumo@gmail.com
+
 Feature: Rest service automation
   I want automatize the execution and response of a rest service
 
   Background: 
-    Given the user enter the endpoint of the rest service
+    Given 'Juan' enter the endpoint of the rest service
 
-  Scenario Outline: Request get
-    When he user enter the dates
+  Scenario Outline: Request
+    When enter the dates
       | key   | cx   | q   |
       | <key> | <cx> | <q> |
-    Then he user verify the response message and code <statusCode>
-    And you should see the result of the search the title '<title>' and '<searchTerms>'
+    Then he user will verify the response message and code <statusCode>
+    And should see the result of the search the title '<title>' and '<searchTerms>'
 
     Examples: 
       | key                                     | cx                                | q        | title                           | searchTerms | statusCode |
