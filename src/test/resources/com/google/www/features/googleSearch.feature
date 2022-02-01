@@ -15,5 +15,5 @@ Feature: Rest service automation
 
     Examples: 
       | key                                     | cx                                | q        | title                           | searchTerms | statusCode |
-      | AIzaSyDAriQuas52ysOibFW_oGb7kwXbvu67agE | 017576662512468239146:omuauf_lfve | facebook | Google Custom Search - facebook | facebook    |        200 |
+      | AIzaSyDAriQuas52ysOibFW_oGb7kwXbvu67agE | 017576662512468239146:omuauf_lfve | linkedin | Google Custom Search - facebook | facebook    |        200 |
       | AIzaSyDAriQuas52ysOibFW_oGb7kwXbvu67agE | 017576662512468239146:omuauf_lfve | twiter   | Google Custom Search - twiter   | twiter      |        200 |
