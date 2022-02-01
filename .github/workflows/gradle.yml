@@ -1,23 +1,12 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-# This workflow will build a Java project with Gradle and cache/restore any dependencies to improve the workflow execution time
-# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-gradle
-
 name: CI
-
 on:
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-
 jobs:
   build:
-
-    runs-on: ubuntu-latest
-
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 11
@@ -26,10 +15,10 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
     - name: Build with Gradle
-      run: chmod +x ./gradlew run
-      
-    - name: HTML Preview
-      uses: pavi2410/html-preview-action@v2
+      run: ./gradlew clean test aggregate
+   
+    - name: GitHub Pages action
+      uses: peaceiris/actions-gh-pages@v3.6.1
       with:
-    # The HTML file you want to preview, relative to the root of the repo
-      html_file: target/site/serenity/index.html
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./target/site/serenity/
