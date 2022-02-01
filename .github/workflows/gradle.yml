@@ -24,7 +24,9 @@ jobs:
       run: ./gradlew clean test aggregate
    
     - name: GitHub Pages action
-      uses: peaceiris/actions-gh-pages@v3.6.1
+      uses: ad-m/github-push-action@v0.5.0
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./target/site/serenity
+        branch: gh-pages
+        force: true
+        directory: ./target/site/serenity
