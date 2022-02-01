@@ -6,7 +6,7 @@ on:
     branches: [ master ]
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Set Timezone
       uses: szenius/set-timezone@v1.0
