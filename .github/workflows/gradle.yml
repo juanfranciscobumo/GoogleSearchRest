@@ -12,10 +12,11 @@ jobs:
     - uses: actions/setup-java@v2
       with:
         java-version: 11
-    - uses: gradle/gradle-build-action@v2
+    
+    - name: Setup and execute Gradle 'test' task
+      uses: gradle/gradle-build-action@v2
       with:
-        gradle-version: release-candidate
-    - run: gradle clean test aggregate --dry-run # just test build configuration
+        arguments: clean test aggregate
    
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3.6.1
