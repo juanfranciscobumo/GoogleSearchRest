@@ -1,51 +1,37 @@
-# ![Serenity BDD](docs/youtube.png "Logo Title Text 1")
+## Welcome to GitHub Pages
 
+You can use the [editor on GitHub](https://github.com/juanfranciscobumo/GoogleSearchRest/edit/visual/docs/index.md) to maintain and preview the content for your website in Markdown files.
 
-# Prueba automatizada para realizar la búsqueda de un video en YouTube
+Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-# ![Serenity BDD](docs/serenity.png "Logo Title Text 1")
+### Markdown
 
-## Framework
+Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-* Serenity: Se utiliza como framework Serenity BDD, que utiliza los resultados de las pruebas para realizar la documentación describiendo lo que hace la aplicación, informa que pruebas se han realizado, las pruebas que fallaron y las que pasaron. 
+```markdown
+Syntax highlighted code block
 
-## Patron de desarrollo
+# Header 1
+## Header 2
+### Header 3
 
-* Se utiliza Screenplay pattern ya que esta centrado en el usuario y orientado a tareas, utiliza los principios S.O.L.I.D. Con screenplay se puede escribir el codigo en un lenguaje mas natural.
+- Bulleted
+- List
 
-## Herramientas de compilación 
+1. Numbered
+2. List
 
-# ![Serenity BDD](docs/gradle.png "Logo Title Text 1")
+**Bold** and _Italic_ and `Code` text
 
-### Gradle
+[Link](url) and ![Image](src)
+```
 
-* Es un gestor de proyectos.
+For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
-# ![Serenity BDD](docs/cucumber.png "Logo Title Text 1")
+### Jekyll Themes
 
-### Cucumber
+Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/juanfranciscobumo/GoogleSearchRest/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-* Es una herramienta que permite escribir los casos de prueba.
+### Support or Contact
 
-## La estructura completa del proyecto es la siguiente:
-
-* Features: Utiliza lenguaje Gherkin y contienen los escenarios de negocio del caso de prueba. 
-* Tasks: Clases que representan tareas que realiza el actor a nivel de proceso de negocio. 
-* Questions: Comprueban los resultados de las operaciones realizadas. 
-* Exceptions: Son las excepciones que se visualizan cuando un test falla o tiene errores. 
-* Interfaces: Es una clase abstracta que se utiliza para agrupar métodos relacionados con cuerpos vacíos.
-
-
-# Requerimientos
-
-* Java JDK 1.8 
-* Gestor de proyectos Gradle 
-
-# Comandos para ejecutar el proyecto.
-
-* gradle clean test aggregate
-
-
-## Autores
-
-Juan Francisco Builes Montoya - juanfranciscobumo@gmail.com
+Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
