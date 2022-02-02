@@ -30,4 +30,4 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: gh-pages
         force: true
-        directory: target/site/serenity
+        directory: /target/site/serenity
