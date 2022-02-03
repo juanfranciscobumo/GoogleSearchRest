@@ -30,7 +30,7 @@ jobs:
       uses: ad-m/github-push-action@v0.5.0
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: visual
+        branch: gh-pages
         exclude_assets: '.png,/bootstrap-treeview/dist/bootstrap-treeview.min.css,/bootstrap-treeview/dist/bootstrap-treeview.min.js'
         force: true
         directory: target/site/serenity/
