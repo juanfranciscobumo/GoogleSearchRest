@@ -30,8 +30,7 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: visual
-        exclude_files: |
-         .png
+        exclude_assets: '.png,/bootstrap-treeview/dist/bootstrap-treeview.min.css,/bootstrap-treeview/dist/bootstrap-treeview.min.js'
         force: true
         directory: target/site/serenity/
         
