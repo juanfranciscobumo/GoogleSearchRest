@@ -30,6 +30,8 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: visual
+        exclude_files: |
+         .png
         force: true
         directory: target/site/serenity/
         
