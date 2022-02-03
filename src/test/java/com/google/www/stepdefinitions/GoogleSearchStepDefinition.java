@@ -4,7 +4,9 @@ import com.google.www.exceptions.ManejoDeExceptions;
 import com.google.www.questions.TheResponseDate;
 import com.google.www.tasks.RealiceSearch;
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.DataTableType;
 import io.cucumber.java8.En;
+import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.rest.abilities.CallAnApi;
@@ -19,6 +21,7 @@ import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeT
 import static org.hamcrest.Matchers.equalTo;
 
 public class GoogleSearchStepDefinition implements En {
+
     public GoogleSearchStepDefinition() {
 
         Before(() -> OnStage.setTheStage(new OnlineCast()));
