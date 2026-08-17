@@ -1,5 +1,17 @@
 
-# Prueba automatizada para realizar una búsqueda con la api de google
+# Prueba automatizada para realizar una búsqueda con la API de Google
+
+> Proyecto de aprendizaje. Requiere una clave de Google Custom Search configurada fuera del repositorio.
+
+## Ejecución segura
+
+Define `GOOGLE_API_KEY` como variable de entorno (o como secreto `GOOGLE_API_KEY` en CI) y ejecuta:
+
+```powershell
+.\gradlew.bat clean test aggregate
+```
+
+La clave no se almacena en archivos de características, código ni workflows.
 
 # ![Serenity BDD](docs/serenity.png "Logo Title Text 1")
 
