@@ -1,61 +1,60 @@
+# Google Search REST API Testing
 
-# Prueba automatizada para realizar una búsqueda con la API de Google
+[![CI](https://github.com/juanfranciscobumo/GoogleSearchRest/actions/workflows/ci.yml/badge.svg)](https://github.com/juanfranciscobumo/GoogleSearchRest/actions/workflows/ci.yml)
+[![Serenity BDD](https://img.shields.io/badge/Serenity--BDD-4.2.7-informational)](https://serenity-bdd.github.io/)
+[![Java](https://img.shields.io/badge/Java-17-orange)](https://adoptium.net/)
+[![Gradle](https://img.shields.io/badge/Gradle-8.5-green)](https://gradle.org/)
 
-> Proyecto de aprendizaje. Requiere una clave de Google Custom Search configurada fuera del repositorio.
+Automated REST API testing against the **Google Custom Search API**, built with **Serenity BDD**, **Screenplay pattern**, **Cucumber** and **Gradle**.
 
-## Ejecución segura
+## What it demonstrates
 
-Define `GOOGLE_API_KEY` como variable de entorno (o como secreto `GOOGLE_API_KEY` en CI) y ejecuta:
+- REST API testing with Serenity Screenplay REST
+- Cucumber BDD scenarios with Gherkin syntax
+- Response validation (status codes, JSON fields)
+- Environment-based configuration (API keys via secrets)
 
-```powershell
-.\gradlew.bat clean test aggregate
+## Tech stack
+
+| Tool | Version |
+|------|---------|
+| Java | 17 |
+| Serenity BDD | 4.2.7 |
+| Cucumber | 7.22.0 |
+| JUnit | 5.11.4 |
+| Gradle | 8.5 |
+
+## Run locally
+
+Set the `GOOGLE_API_KEY` environment variable, then:
+
+```bash
+./gradlew clean test aggregate
 ```
 
-La clave no se almacena en archivos de características, código ni workflows.
+On Windows:
 
-# ![Serenity BDD](docs/serenity.png "Logo Title Text 1")
+```powershell
+$env:GOOGLE_API_KEY="your-key"; .\gradlew.bat clean test aggregate
+```
 
-## Framework
+The Serenity report is generated under `build/site/serenity/`.
 
-* Serenity-BDD: Se utiliza como framework Serenity BDD, que utiliza los resultados de las pruebas para realizar la documentación describiendo lo que hace la aplicación, informa que pruebas se han realizado, las pruebas que fallaron y las que pasaron.
+## CI/CD
 
-## Patron de desarrollo
+GitHub Actions runs the test suite on every push to `master` and deploys the Serenity report to **GitHub Pages**.
 
-* Se utiliza Screenplay pattern ya que esta centrado en el usuario y orientado a tareas, utiliza los principios S.O.L.I.D. Con screenplay se puede escribir el codigo en un lenguaje mas natural.
+> **Note:** The `GOOGLE_API_KEY` secret must be configured in the repository settings.
 
-## Herramientas de compilación
+## Project structure
 
-# ![Serenity BDD](docs/gradle.png "Logo Title Text 1")
+```
+src/
+├── main/java/          # Step definitions, tasks, questions, models
+└── test/resources/
+    └── features/       # Cucumber .feature files
+```
 
-### Gradle
+## Author
 
-* Es un gestor de proyectos.
-
-# ![Serenity BDD](docs/cucumber.png "Logo Title Text 1")
-
-### Cucumber
-
-* Es una herramienta que permite escribir los casos de prueba.
-
-## La estructura completa del proyecto es la siguiente:
-
-* Features: Utiliza lenguaje Gherkin y contienen los escenarios de negocio del caso de prueba.
-* Tasks: Clases que representan tareas que realiza el actor a nivel de proceso de negocio.
-* Questions: Comprueban los resultados de las operaciones realizadas.
-* Exceptions: Son las excepciones que se visualizan cuando un test falla o tiene errores.
-* Interfaces: Es una clase abstracta que se utiliza para agrupar métodos relacionados con cuerpos vacíos.
-* Utils: Se encuentran clases que sirven como utilidades de otras clases
-
-# Requerimientos
-
-* Java JDK 1.8
-* Gestor de proyectos Gradle
-
-# Comandos para ejecutar el proyecto.
-
-* gradle clean test aggregate
-
-
-## Autores
-
-Juan Francisco Builes Montoya - juanfranciscobumo@gmail.com
+Juan Francisco Builes Montoya - [juanfranciscobumo@gmail.com](mailto:juanfranciscobumo@gmail.com)
