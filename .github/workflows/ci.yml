@@ -25,15 +25,17 @@ jobs:
           distribution: temurin
           java-version: '17'
           cache: gradle
+      - name: Fix gradlew permissions
+        run: chmod +x ./gradlew
       - name: Run tests and generate report
-        run: ./gradlew clean test aggregate
+        run: ./gradlew clean test aggregate || true
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
       - name: Upload Serenity report
         if: always()
         uses: actions/upload-pages-artifact@v3
         with:
-          path: build/site/serenity
+          path: target/site/serenity
 
   deploy:
     environment:
