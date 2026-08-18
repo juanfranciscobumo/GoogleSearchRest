@@ -16,7 +16,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath("net.serenity-bdd:serenity-gradle-plugin:4.0.46")
+        classpath("net.serenity-bdd:serenity-gradle-plugin:4.2.7")
     }
 }
 apply plugin: 'java'
